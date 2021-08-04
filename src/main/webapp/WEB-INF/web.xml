@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+        version="4.0"
+        metadata-complete="true"
+        xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+        http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+
+    <!--    访问url：localhost:8080/hello/.../xxx.roy-->
+    <!--    该方式仅仅定义后缀为.roy-->
+    <servlet>
+        <servlet-name>helloServlet</servlet-name>
+        <servlet-class>com.roy.servlet.HelloServlet</servlet-class>
+    </servlet>
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>helloServlet</servlet-name>-->
+<!--        <url-pattern>*.roy</url-pattern>-->
+<!--    </servlet-mapping>-->
+    <!--    访问url：localhost:8080/hello/helloServlet-->
+    <servlet-mapping>
+        <servlet-name>helloServlet</servlet-name>
+        <url-pattern>/helloServlet</url-pattern>
+    </servlet-mapping>
+
+<!--    <servlet>-->
+<!--        <servlet-name>errorServlet</servlet-name>-->
+<!--        <servlet-class>com.roy.servlet.ErrorServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    访问url：localhost:8080/hello/...（任意路径）：设定该映射路径是为了映射到自定义的404异常页面，而不是用浏览器默认的404页面-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>errorServlet</servlet-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </servlet-mapping>-->
+    
+    <servlet>
+        <servlet-name>servletObj1</servlet-name>
+        <servlet-class>com.roy.servlet.ServletObj01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletObj1</servlet-name>
+        <url-pattern>/servletObj1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>servletObj2</servlet-name>
+        <servlet-class>com.roy.servlet.ServletObj02</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletObj2</servlet-name>
+        <url-pattern>/servletObj2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>servletObj3</servlet-name>
+        <servlet-class>com.roy.servlet.ServletObj03</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletObj3</servlet-name>
+        <url-pattern>/servletObj3</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>fileServlet</servlet-name>
+        <servlet-class>com.roy.servlet.FileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>fileServlet</servlet-name>
+        <url-pattern>/download</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RedirectServlet</servlet-name>
+        <servlet-class>com.roy.servlet.RedirectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RedirectServlet</servlet-name>
+        <url-pattern>/redirect</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RequestServlet</servlet-name>
+        <servlet-class>com.roy.servlet.RequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RequestServlet</servlet-name>
+        <url-pattern>/initialLogin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.roy.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CookieDemo1</servlet-name>
+        <servlet-class>com.roy.servlet.CookieDemo1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieDemo1</servlet-name>
+        <url-pattern>/cookie1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SessionDemo1</servlet-name>
+        <servlet-class>com.roy.servlet.SessionDemo1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionDemo1</servlet-name>
+        <url-pattern>/session1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SessionDemo2</servlet-name>
+        <servlet-class>com.roy.servlet.SessionDemo2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionDemo2</servlet-name>
+        <url-pattern>/session2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SessionDemo3</servlet-name>
+        <servlet-class>com.roy.servlet.SessionDemo3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionDemo3</servlet-name>
+        <url-pattern>/session3</url-pattern>
+    </servlet-mapping>
+
+<!--    设置Session默认的失效时间-->
+<!--    <session-config>-->
+<!--        <session-timeout>1</session-timeout>-->
+<!--    </session-config>-->
+
+</web-app>
